@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spring-gumball-ingress
+spec:
+  defaultBackend:
+    service:
+      name: spring-gumball-service
+      port:
+        number: 8080
